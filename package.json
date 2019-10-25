@@ -1,0 +1,27 @@
+{
+  "name": "my-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev-app": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "flow": "flow",
+    "prettier": "prettier --write './**/*.js'"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
+    "next": "9.1.1",
+    "react": "16.11.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "16.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.110.1",
+    "prettier": "^1.18.2"
+  }
+}
