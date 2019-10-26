@@ -10,18 +10,25 @@ import Section from '../components/Section'
 import { ABOUT_ME } from '../consts/strings'
 import {
     SECTION_TITLE_ABOUT,
-    SECTION_TITLE_CONTACT,
+    SECTION_TITLE_EDUCATION,
     SECTION_TITLE_WORKS,
     SECTION_TITLE_SKILLS,
     ALL_SKILLS,
     ALL_TASKS_WORKS,
     SECTION_TITLE_HOME,
+    ALL_EDUCATION,
+    SECTION_TITLE_HOBBIES,
+    SECTION_TITLE_CONTACT,
+    SECTION_TITLE_LANGUAGES,
+    ALL_LANGUAGES,
+    CONTACT_INFORMATIONS,
 } from '../consts'
-import ListSkills from '../components/List/ListSkills'
 import ListWorks from '../components/List/ListWorks'
 import FloatingButton from '../components/FloatingButton'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import ArrowUpward from '@material-ui/icons/ArrowUpward'
+import ListEducation from '../components/List/ListEducation'
+import List from "../components/List";
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -106,13 +113,22 @@ const App = () => {
                     </Box>
                 </Section>
                 <Section title={SECTION_TITLE_SKILLS}>
-                    <ListSkills data={ALL_SKILLS} />
+                    <List data={ALL_SKILLS} />
                 </Section>
                 <Section title={SECTION_TITLE_WORKS}>
                     <ListWorks data={ALL_TASKS_WORKS} />
                 </Section>
+                <Section title={SECTION_TITLE_EDUCATION}>
+                    <ListEducation data={ALL_EDUCATION} />
+                </Section>
+                <Section title={SECTION_TITLE_LANGUAGES}>
+                    <List data={ALL_LANGUAGES} />
+                </Section>
+                <Section title={SECTION_TITLE_HOBBIES}>
+                    <div />
+                </Section>
                 <Section title={SECTION_TITLE_CONTACT}>
-                    <Box />
+                    <List data={CONTACT_INFORMATIONS} />
                 </Section>
                 <FloatingButton
                     goto={SECTION_TITLE_HOME}

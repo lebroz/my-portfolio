@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {
     DEFAULT_SPACING,
     SECTION_TITLE_ABOUT,
-    SECTION_TITLE_CONTACT,
+    SECTION_TITLE_EDUCATION,
     SECTION_TITLE_HOME,
     SECTION_TITLE_WORKS,
     SECTION_TITLE_SKILLS,
@@ -13,7 +13,7 @@ import {
 
 const ButtonHeader = ({ title }: { title: string }) => {
     return (
-        <Box style={{ marginTop: DEFAULT_SPACING, padding: DEFAULT_SPACING }}>
+        <Box style={{ marginTop: DEFAULT_SPACING, padding: DEFAULT_SPACING * 2}}>
             <Link href={`#${title.toLowerCase().split(' ')[0]}`}>
                 <a
                     style={{
@@ -47,7 +47,7 @@ const Header = () => {
             <ButtonHeader title={SECTION_TITLE_ABOUT} />
             <ButtonHeader title={SECTION_TITLE_SKILLS} />
             <ButtonHeader title={SECTION_TITLE_WORKS} />
-            <ButtonHeader title={SECTION_TITLE_CONTACT} />
+            <ButtonHeader title={SECTION_TITLE_EDUCATION} />
         </Box>
     )
 }

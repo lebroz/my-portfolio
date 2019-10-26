@@ -5,7 +5,7 @@ import { DEFAULT_SPACING } from '../../consts'
 import Box from '@material-ui/core/Box'
 import { GREY_10_LIGHT, GREY_10 } from '../../consts/colors'
 
-const ListWorksHeader = ({
+export const ListWorksHeader = ({
     leftTitle,
     leftStyle,
     rightTitle,
@@ -44,7 +44,7 @@ const ListWorksHeader = ({
     )
 }
 
-const ListWorksMainTasks = ({
+export const ListWorksMainTasks = ({
     data,
     end,
 }: {

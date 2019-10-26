@@ -4,49 +4,52 @@ export const SECTION_TITLE_HOME = 'Home'
 export const SECTION_TITLE_ABOUT = 'About Me'
 export const SECTION_TITLE_SKILLS = 'Skills'
 export const SECTION_TITLE_WORKS = 'Work History'
+export const SECTION_TITLE_EDUCATION = 'Educational background'
+export const SECTION_TITLE_LANGUAGES = 'Languages'
+export const SECTION_TITLE_HOBBIES = 'Hobbies'
 export const SECTION_TITLE_CONTACT = 'Contact'
 
 export const ALL_SKILLS = [
     {
-        title: 'Front End',
-        skills:
+        key: 'Front End',
+        value:
             'Reactjs, Nextjs, Javasript ES6, RESTful API, Webpack, Babel, HTML5 / CSS3',
     },
     {
-        title: 'Mobile',
-        skills: 'React Native',
+        key: 'Mobile',
+        value: 'React Native',
     },
     {
-        title: 'Back End',
-        skills: 'NodeJS, Express, Passport, JWT, Mongoose',
+        key: 'Back End',
+        value: 'NodeJS, Express, Passport, JWT, Mongoose',
     },
     {
-        title: 'Version Control',
-        skills: 'Git',
+        key: 'Version Control',
+        value: 'Git',
     },
     {
-        title: 'Database',
-        skills: 'MongoDB',
+        key: 'Database',
+        value: 'MongoDB',
     },
     {
-        title: 'IDE',
-        skills: 'Webstorm, VS Code',
+        key: 'IDE',
+        value: 'Webstorm, VS Code',
     },
     {
-        title: 'Testing',
-        skills: 'Jest',
+        key: 'Testing',
+        value: 'Jest',
     },
     {
-        title: 'Project Management',
-        skills: 'Jira',
+        key: 'Project Management',
+        value: 'Jira',
     },
     {
-        title: 'Automation',
-        skills: 'Docker',
+        key: 'Automation',
+        value: 'Docker',
     },
     {
-        title: 'Platform',
-        skills: 'Linux, iOS, Android, Windows',
+        key: 'Platform',
+        value: 'Linux, iOS, Android, Windows',
     },
 ]
 
@@ -100,5 +103,70 @@ export const ALL_TASKS_WORKS = [
         companyName: 'Parabellum Software',
         location: 'St-Dié-des-Vosges, France',
         tasks: ['Phoning, mailing, prospecting', 'Website referencing'],
+    },
+]
+
+export const ALL_EDUCATION = [
+    {
+        title: 'Epitech  Graduate Diploma in Information Technology',
+        date: '2016 - Expected 2021',
+        subtitle: 'Epitech, Graduate School of Digital Innovation',
+        location: 'Paris, France',
+    },
+    {
+        title: 'Faculty of Biology in Strasbourg',
+        date: '2015 - 2016',
+        subtitle: 'First Year',
+        location: 'Strasbourg, France',
+    },
+    {
+        title: 'Faculty of Medicine in Nancy',
+        date: '2013 - 2015',
+        subtitle: 'First Year',
+        location: 'Strasbourg, France',
+    },
+    {
+        title: 'Terminale S at the Lycée Beau Jardin in Saint-Dié',
+        date: '2012 - 2013',
+        subtitle: 'A-level with a fair degree of honours',
+        location: 'St-Dié-des-Vosges, France',
+    },
+]
+
+export const ALL_LANGUAGES = [
+    {
+        key: 'French',
+        value: 'Mother Tongue',
+    },
+    {
+        key: 'English',
+        value: 'Intermediate Level (TOEIC 750, TOEFL 81)',
+    },
+    {
+        key: 'Spanish',
+        value: 'Conversational',
+    },
+]
+
+export const CONTACT_INFORMATIONS = [
+    {
+        key: 'Address',
+        value: '1409/247, Peel St, North Melbourne, VIC 3051',
+    },
+    {
+        key: 'Phone',
+        value: '0403 687 430',
+    },
+    {
+        key: 'Email',
+        value: 'romainlancia@gmail.com',
+    },
+    {
+        key: 'Linkedin',
+        value: '@romain-lancia',
+    },
+    {
+        key: 'Github',
+        value: '@lebroz',
     },
 ]
