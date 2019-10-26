@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import { Box, Typography } from '@material-ui/core'
 import Divider from '../components/Divider'
 import Header from '../components/Header'
-import { BLUE_GREY_10_DARK, GREY_10 } from '../consts/colors'
+import { BLUE_GREY_10_DARK } from '../consts/colors'
 import Section from '../components/Section'
 import { ABOUT_ME } from '../consts/strings'
 import {
@@ -28,7 +28,7 @@ import FloatingButton from '../components/FloatingButton'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import ArrowUpward from '@material-ui/icons/ArrowUpward'
 import ListEducation from '../components/List/ListEducation'
-import List from "../components/List";
+import List from '../components/List'
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)

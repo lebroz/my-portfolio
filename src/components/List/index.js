@@ -1,10 +1,10 @@
 // @flow
 import React from 'react'
-import {ListWorksHeader} from './ListWorks'
-import {GREY_10_LIGHT} from '../../consts/colors'
-import {DEFAULT_SPACING} from '../../consts'
+import { ListWorksHeader } from './ListWorks'
+import { GREY_10_LIGHT } from '../../consts/colors'
+import { DEFAULT_SPACING } from '../../consts'
 
-const List = ({data}: { data: Object }) => {
+const List = ({ data }: { data: Object }) => {
     return (
         <>
             {data.map((item, index) => {
@@ -39,4 +39,5 @@ const List = ({data}: { data: Object }) => {
         </>
     )
 }
-export default List;
+
+export default List

@@ -1,0 +1,7 @@
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier && yarn flow && git diff --exit-code",
+    }
+  }
+}
