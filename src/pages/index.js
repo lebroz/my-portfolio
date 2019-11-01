@@ -44,10 +44,6 @@ const App = () => {
         <>
             <Head>
                 <title>Romain Lancia</title>
-                <link
-                    href="https://fonts.googleapis.com/css?family=Economica|Nunito|Roboto|Roboto+Condensed|Montserrat|Lato|Dosis&display=swap"
-                    rel="stylesheet"
-                />
             </Head>
             <Layout>
                 <Box
