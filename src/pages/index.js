@@ -45,10 +45,15 @@ const App = () => {
         window.addEventListener('scroll', () => {
             setPosScrollbar(window.scrollY)
         })
-        ReactPixel.init('883039698874388', advancedMatching, options)
+        ReactPixel.init(
+            process.env.FACEBOOK_PIXEL_ID,
+            advancedMatching,
+            options
+        )
         ReactPixel.pageView()
     }, [posScrollbar, setPosScrollbar])
 
+    console.log('yolo: ', process.env.FACEBOOK_PIXEL_ID)
     return (
         <>
             <Head>

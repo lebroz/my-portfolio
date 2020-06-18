@@ -4,8 +4,6 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../../src/theme'
-import Router from 'next/router'
-import withFBQ from 'next-fbq'
 
 class MyApp extends App {
     componentDidMount() {
@@ -34,4 +32,3 @@ class MyApp extends App {
 }
 
 export default MyApp
-// export default withFBQ('883039698874388', Router)(MyApp)
