@@ -29,13 +29,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 import ArrowUpward from '@material-ui/icons/ArrowUpward'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
-import ReactPixel from 'react-facebook-pixel'
-
-const advancedMatching = {} // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
-const options = {
-    autoConfig: true, // set pixel's autoConfig
-    debug: false, // enable logs
-}
+import { facebookPixelInit, facebookPixelPageView } from '../lib/pixel'
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -45,12 +39,8 @@ const App = () => {
         window.addEventListener('scroll', () => {
             setPosScrollbar(window.scrollY)
         })
-        ReactPixel.init(
-            process.env.FACEBOOK_PIXEL_ID,
-            advancedMatching,
-            options
-        )
-        ReactPixel.pageView()
+        facebookPixelInit()
+        facebookPixelPageView()
     }, [posScrollbar, setPosScrollbar])
 
     console.log('yolo: ', process.env.FACEBOOK_PIXEL_ID)
