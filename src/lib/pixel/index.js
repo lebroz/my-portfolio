@@ -1,5 +1,6 @@
 // @flow
 import ReactPixel from 'react-facebook-pixel'
+import { isEmpty } from 'voca'
 
 const advancedMatching = {} // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
 const options = {
@@ -8,17 +9,29 @@ const options = {
 }
 
 export function facebookPixelInit() {
-    ReactPixel.init(process.env.FACEBOOK_PIXEL_ID, advancedMatching, options)
+    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+        ReactPixel.init(
+            process.env.FACEBOOK_PIXEL_ID,
+            advancedMatching,
+            options
+        )
+    }
 }
 
 export function facebookPixelPageView() {
-    ReactPixel.pageView()
+    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+        ReactPixel.pageView()
+    }
 }
 
 export function facebookPixelTrack(event: string, data: *) {
-    ReactPixel.track(event, data)
+    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+        ReactPixel.track(event, data)
+    }
 }
 
 export function facebookPixelTrackCustom(event: string, data: *) {
-    ReactPixel.trackCustom(event, data)
+    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+        ReactPixel.trackCustom(event, data)
+    }
 }

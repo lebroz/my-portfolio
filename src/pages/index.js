@@ -25,8 +25,7 @@ import {
 } from '../consts'
 import ListWorks from '../components/List/ListWorks'
 import FloatingButton from '../components/FloatingButton'
-import ExpandMore from '@material-ui/icons/ExpandMore'
-import ArrowUpward from '@material-ui/icons/ArrowUpward'
+import { ExpandMore, ArrowUpward } from '@material-ui/icons'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
 import { facebookPixelInit, facebookPixelPageView } from '../lib/pixel'
@@ -43,7 +42,6 @@ const App = () => {
         facebookPixelPageView()
     }, [posScrollbar, setPosScrollbar])
 
-    console.log('yolo: ', process.env.FACEBOOK_PIXEL_ID)
     return (
         <>
             <Head>
@@ -83,7 +81,7 @@ const App = () => {
                             letterSpacing: 2.75,
                         }}
                     >
-                        Full Stack Web Developer
+                        Software Engineer
                     </Typography>
                     <Divider />
                     <FloatingButton
