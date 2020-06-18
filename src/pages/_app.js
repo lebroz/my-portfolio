@@ -33,4 +33,5 @@ class MyApp extends App {
     }
 }
 
-export default withFBQ('883039698874388', Router)(MyApp)
+export default MyApp
+// export default withFBQ('883039698874388', Router)(MyApp)
