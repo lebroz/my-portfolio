@@ -28,7 +28,7 @@ import FloatingButton from '../components/FloatingButton'
 import { ExpandMore, ArrowUpward } from '@material-ui/icons'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
-import { facebookPixelInit, facebookPixelPageView } from '../lib/pixel'
+import { withFacebookPixel } from '../lib/hoc'
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -38,8 +38,6 @@ const App = () => {
         window.addEventListener('scroll', () => {
             setPosScrollbar(window.scrollY)
         })
-        facebookPixelInit()
-        facebookPixelPageView()
     }, [posScrollbar, setPosScrollbar])
 
     return (
@@ -146,4 +144,4 @@ const App = () => {
     )
 }
 
-export default App
+export default withFacebookPixel(App)
