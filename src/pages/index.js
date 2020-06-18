@@ -29,6 +29,13 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 import ArrowUpward from '@material-ui/icons/ArrowUpward'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
+import ReactPixel from 'react-facebook-pixel'
+
+const advancedMatching = {} // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
+const options = {
+    autoConfig: true, // set pixel's autoConfig
+    debug: false, // enable logs
+}
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -38,6 +45,8 @@ const App = () => {
         window.addEventListener('scroll', () => {
             setPosScrollbar(window.scrollY)
         })
+        ReactPixel.init('883039698874388', advancedMatching, options)
+        ReactPixel.pageView()
     }, [posScrollbar, setPosScrollbar])
 
     return (
