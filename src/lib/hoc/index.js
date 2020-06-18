@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { facebookPixelInit, facebookPixelPageView } from '../pixel'
 
-export function withFacebookPixel(WrappedComponent) {
+export default function withFacebookPixel(WrappedComponent) {
     const EnhancedComponent = () => {
         useLayoutEffect(() => {
             facebookPixelInit()
