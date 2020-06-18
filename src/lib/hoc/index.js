@@ -2,7 +2,7 @@ import React from 'react'
 import { facebookPixelInit, facebookPixelPageView } from '../pixel'
 
 export function withFacebookPixel(WrappedComponent) {
-    return class extends React.Component {
+    return class EnhancedComponent extends React.Component {
         constructor(props) {
             super(props)
         }
@@ -13,7 +13,7 @@ export function withFacebookPixel(WrappedComponent) {
         }
 
         render() {
-            return <WrappedComponent />
+            return <WrappedComponent {...this.props} />
         }
     }
 }

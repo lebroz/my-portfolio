@@ -11,29 +11,24 @@ export const SECTION_TITLE_CONTACT = 'Contact'
 
 export const ALL_SKILLS = [
     {
-        key: 'Front End',
-        value:
-            'Reactjs, Nextjs, Javasript ES6, RESTful API, Webpack, Babel, HTML5 / CSS3',
+        key: 'Web',
+        value: 'Reactjs, Javasript, REST API, HTML5 / CSS3',
     },
     {
         key: 'Mobile',
-        value: 'React Native',
+        value: 'Flutter, React Native',
     },
     {
         key: 'Back End',
-        value: 'NodeJS, Express, Passport, JWT, Mongoose',
+        value: 'NodeJS, Express, NoSQL',
     },
     {
-        key: 'Version Control',
-        value: 'Git',
+        key: 'Others',
+        value: 'C/C++, Dart, Python',
     },
     {
-        key: 'Database',
-        value: 'MongoDB',
-    },
-    {
-        key: 'IDE',
-        value: 'Webstorm, VS Code',
+        key: 'DevOps',
+        value: 'GCP, Firebase, Docker',
     },
     {
         key: 'Testing',
@@ -42,10 +37,6 @@ export const ALL_SKILLS = [
     {
         key: 'Project Management',
         value: 'Jira',
-    },
-    {
-        key: 'Automation',
-        value: 'Docker',
     },
     {
         key: 'Platform',

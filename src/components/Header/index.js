@@ -45,7 +45,6 @@ const Header = () => {
                 top: 0,
             }}
         >
-            <ButtonHeader title={SECTION_TITLE_HOME} />
             <ButtonHeader title={SECTION_TITLE_ABOUT} />
             <ButtonHeader title={SECTION_TITLE_SKILLS} />
             <ButtonHeader title={SECTION_TITLE_WORKS} />
