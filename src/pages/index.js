@@ -28,7 +28,7 @@ import FloatingButton from '../components/FloatingButton'
 import { ExpandMore, ArrowUpward } from '@material-ui/icons'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
-import withFacebookPixel from '../lib/hoc'
+import { withFacebookPixel } from '../lib/hoc'
 
 const App = () => {
     const [posScrollbar, setPosScrollbar] = useState(0)
