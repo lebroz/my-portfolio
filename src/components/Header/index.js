@@ -9,6 +9,9 @@ import {
     SECTION_TITLE_HOME,
     SECTION_TITLE_WORKS,
     SECTION_TITLE_SKILLS,
+    SECTION_TITLE_LANGUAGES,
+    SECTION_TITLE_HOBBIES,
+    SECTION_TITLE_CONTACT,
 } from '../../consts'
 
 const ButtonHeader = ({ title }: { title: string }) => {
@@ -49,6 +52,9 @@ const Header = () => {
             <ButtonHeader title={SECTION_TITLE_SKILLS} />
             <ButtonHeader title={SECTION_TITLE_WORKS} />
             <ButtonHeader title={SECTION_TITLE_EDUCATION} />
+            <ButtonHeader title={SECTION_TITLE_LANGUAGES} />
+            <ButtonHeader title={SECTION_TITLE_HOBBIES} />
+            <ButtonHeader title={SECTION_TITLE_CONTACT} />
         </Box>
     )
 }
