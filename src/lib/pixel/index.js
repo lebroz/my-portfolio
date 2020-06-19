@@ -1,34 +1,36 @@
 // @flow
 import ReactPixel from 'react-facebook-pixel'
-import { isEmpty } from 'voca'
 
 const advancedMatching = {} // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
 const options = {
     autoConfig: true, // set pixel's autoConfig
-    debug: false, // enable logs
+    debug: true, // enable logs
 }
 
 export function facebookPixelInit() {
-    console.log('eenv: ', process.env.FACEBOOK_PIXEL_ID)
-    // if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
-    ReactPixel.init('883039698874388', advancedMatching, options)
-    // }
+    if (process.env.IS_PRODUCTION) {
+        ReactPixel.init(
+            process.env.FACEBOOK_PIXEL_ID,
+            advancedMatching,
+            options
+        )
+    }
 }
 
 export function facebookPixelPageView() {
-    // if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
-    ReactPixel.pageView()
-    // }
+    if (process.env.IS_PRODUCTION) {
+        ReactPixel.pageView()
+    }
 }
 
 export function facebookPixelTrack(event: string, data: *) {
-    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+    if (process.env.IS_PRODUCTION) {
         ReactPixel.track(event, data)
     }
 }
 
 export function facebookPixelTrackCustom(event: string, data: *) {
-    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+    if (process.env.IS_PRODUCTION) {
         ReactPixel.trackCustom(event, data)
     }
 }

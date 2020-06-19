@@ -28,8 +28,7 @@ import { ExpandMore, ArrowUpward } from '@material-ui/icons'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
 import Text from '../components/Text'
-import withFBQ from 'next-fbq'
-import { Router } from 'next/router'
+import { withFacebookPixel } from '../lib/hoc'
 
 function Page() {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -135,4 +134,4 @@ function Page() {
     )
 }
 
-export default withFBQ('883039698874388', Router)(Page)
+export default withFacebookPixel(Page)

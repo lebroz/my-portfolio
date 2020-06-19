@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev-app": "vercel dev",
+        "dev": "NODE_ENV=development next dev",
         "build": "next build",
-        "start": "next start",
+        "start": "NODE_ENV=production next start",
         "flow": "flow",
         "prettier": "prettier --write package.json './{src}/**/*.js'"
     },
@@ -18,7 +18,6 @@
         "@material-ui/core": "^4.5.1",
         "@material-ui/icons": "^4.5.1",
         "next": "9.3.2",
-        "next-fbq": "^2.0.0",
         "react": "16.11.0",
         "react-custom-scrollbars": "^4.2.1",
         "react-dom": "16.11.0",
