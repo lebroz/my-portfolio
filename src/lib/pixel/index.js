@@ -9,19 +9,16 @@ const options = {
 }
 
 export function facebookPixelInit() {
-    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
-        ReactPixel.init(
-            process.env.FACEBOOK_PIXEL_ID,
-            advancedMatching,
-            options
-        )
-    }
+    console.log('eenv: ', process.env.FACEBOOK_PIXEL_ID)
+    // if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+    ReactPixel.init('883039698874388', advancedMatching, options)
+    // }
 }
 
 export function facebookPixelPageView() {
-    if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
-        ReactPixel.pageView()
-    }
+    // if (!isEmpty(process.env.FACEBOOK_PIXEL_ID)) {
+    ReactPixel.pageView()
+    // }
 }
 
 export function facebookPixelTrack(event: string, data: *) {

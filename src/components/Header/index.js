@@ -17,7 +17,10 @@ import {
 const ButtonHeader = ({ title }: { title: string }) => {
     return (
         <Box
-            style={{ marginTop: DEFAULT_SPACING, padding: DEFAULT_SPACING * 2 }}
+            style={{
+                marginTop: DEFAULT_SPACING,
+                padding: DEFAULT_SPACING * 2,
+            }}
         >
             <Link href={`#${title.toLowerCase().split(' ')[0]}`}>
                 <a

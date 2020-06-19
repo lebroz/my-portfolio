@@ -28,8 +28,8 @@ import { ExpandMore, ArrowUpward } from '@material-ui/icons'
 import ListEducation from '../components/List/ListEducation'
 import List from '../components/List'
 import Text from '../components/Text'
-import Router from 'next/router'
 import withFBQ from 'next-fbq'
+import { Router } from 'next/router'
 
 function Page() {
     const [posScrollbar, setPosScrollbar] = useState(0)
@@ -50,9 +50,7 @@ function Page() {
                 <Box
                     style={{
                         display: 'flex',
-                        position: 'fixed',
                         height: '100vh',
-                        maxHeight: '100vh',
                         flexDirection: 'column',
                         backgroundColor: BLUE_GREY_10_DARK,
                         alignItems: 'center',
@@ -137,4 +135,4 @@ function Page() {
     )
 }
 
-export default withFBQ(process.env.FACEBOOK_PIXEL_ID, Router)(Page)
+export default withFBQ('883039698874388', Router)(Page)
